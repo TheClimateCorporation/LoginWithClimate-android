@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('libs/volley.jar')
+
+}
+
+group = 'com.climate.login'
+version = '1'
+
+
+bintray {
+    user = 'wbendick'
+    key = 'e1e8cea1eba7349068f47736b4d8f175b9b4d685'
+    pkg {
+        repo = 'maven'
+        name = 'com.climate.login'
+
+        version {
+            name = '1'
+            desc = 'Login with Climate'
+            released  = new Date()
+            vcsTag = '1'
+        }
+
+        licenses = ['Apache-2.0']
+//        vcsUrl = 'https://github.com/hathibelagal/LibraryTutorial.git'
+//        websiteUrl = 'https://github.com/hathibelagal/LibraryTutorial'
+    }
+    configurations = ['archives']
+}
