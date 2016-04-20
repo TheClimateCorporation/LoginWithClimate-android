@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity implements LoginButton.Login
 		setSupportActionBar(toolbar);
 
 		textView = (TextView)findViewById(R.id.textView);
-
-
 		LoginButton loginButton = (LoginButton) findViewById(R.id.login);
 		loginButton.registerListener(this);
 		loginButton.setCredentials("dpcniksl1rb6mo", "h4p9u356pvqcpmfj56h58o60l9");
@@ -48,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements LoginButton.Login
 		Log.d(TAG, "onLogin");
 
 		JsonObjectRequest jsObjRequest = new JsonObjectRequest
-				(Request.Method.GET, "https://dmfhoydgci.execute-api.us-east-1.amazonaws.com/qa1/fields", null, new Response.Listener<JSONObject>() {
+				(Request.Method.GET, "https://hack.climate.com/api/fields", null, new Response.Listener<JSONObject>() {
 
 					@Override
 					public void onResponse(JSONObject response) {

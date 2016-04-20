@@ -102,7 +102,7 @@ public class LoginButton extends Button implements View.OnClickListener {
 					Log.d("tcc", "got code " + code);
 
 					RequestQueue queue = Volley.newRequestQueue(context);
-					String tokenURL = "https://qa1.climate.com/api/oauth/token";
+					String tokenURL = "https://climate.com/api/oauth/token";
 
 					StringRequest stringRequest = new StringRequest(Request.Method.POST, tokenURL,
 							new Response.Listener<String>() {
@@ -172,7 +172,7 @@ public class LoginButton extends Button implements View.OnClickListener {
 		});
 
 		dialog.setContentView(wv);
-		wv.loadUrl("https://qa1.climate.com/static/app-login/index.html?mobile=true&page=oidcauthn&response_type=code&redirect_uri=done://&scope=openid user&client_id=" + clientID);
+		wv.loadUrl("https://climate.com/static/app-login/index.html?mobile=true&page=oidcauthn&response_type=code&redirect_uri=done://&scope=openid user&client_id=" + clientID);
 	}
 
 	public interface LoginListener {

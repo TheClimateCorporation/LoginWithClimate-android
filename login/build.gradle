@@ -29,7 +29,7 @@ dependencies {
 }
 
 group = 'com.climate.login'
-version = '1'
+version = '2'
 
 
 bintray {
@@ -40,10 +40,10 @@ bintray {
         name = 'com.climate.login'
 
         version {
-            name = '1'
+            name = '2'
             desc = 'Login with Climate'
             released  = new Date()
-            vcsTag = '1'
+            vcsTag = '2'
         }
 
         licenses = ['Apache-2.0']
